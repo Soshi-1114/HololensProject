@@ -28,11 +28,12 @@ public class Navigate : MonoBehaviour
         var targetDistance = Vector3.Distance( targetPoint, navigaterPoint );
         var evacueeDistance = Vector3.Distance( evacueePoint, navigaterPoint );
         
-        if(evacueeDistance <= 0.5f){
+        if(evacueeDistance <= 1f){
             if(targetDistance >= 1f){
                 navigater.destination = targetPoint;
                 navigater.speed = 1f;
                 navigater.updateRotation = true;
+                _debug.text = "target\n"+navigater.pathPending+"\n";
             }else{
                 //evacueeに近付くと止まる
                 navigater.speed = 0f;
@@ -43,6 +44,7 @@ public class Navigate : MonoBehaviour
             navigater.destination = evacueePoint;
             navigater.speed = 1f;
             navigater.updateRotation = true;
+            _debug.text = "evacuee\n"+navigater.pathPending+"\n";
         }
 
 
