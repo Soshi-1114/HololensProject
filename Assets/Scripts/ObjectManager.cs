@@ -5,24 +5,22 @@ using UnityEngine;
 public class ObjectManager : MonoBehaviour
 {
     public GameObject fire;
-    public GameObject agents;
+    public GameObject five_agents;
+    public GameObject ten_agents;
+    public GameObject fifteen_agents;
+    public GameObject twenty_agents;
+
     public GameObject flor;
 
     // Start is called before the first frame update
     void Start()
     {
         fire.SetActive(false);
-        agents.SetActive(false);
-    }
+        five_agents.SetActive(false);
+        ten_agents.SetActive(false);
+        fifteen_agents.SetActive(false);
+        twenty_agents.SetActive(false);
 
-    public void showObject()
-    {
-        fire.SetActive(true);
-    }
-
-    public void hideObject()
-    {
-        fire.SetActive(false);
     }
 
     public void showFlor()
@@ -45,12 +43,39 @@ public class ObjectManager : MonoBehaviour
     }
     public void showAgent()
     {
-        agents.SetActive(true);
+        five_agents.SetActive(true);
     }
 
     public void hideAgent()
     {
-        agents.SetActive(false);
+        five_agents.SetActive(false);
+    }
+    public void showTenAgent()
+    {
+        ten_agents.SetActive(true);
+    }
+
+    public void hideTenAgent()
+    {
+        ten_agents.SetActive(false);
+    }
+    public void showFifteenAgent()
+    {
+        fifteen_agents.SetActive(true);
+    }
+
+    public void hideFifteenAgent()
+    {
+        fifteen_agents.SetActive(false);
+    }
+    public void showTwentyAgent()
+    {
+        twenty_agents.SetActive(true);
+    }
+
+    public void hideTwentyAgent()
+    {
+        twenty_agents.SetActive(false);
     }
 }
 
