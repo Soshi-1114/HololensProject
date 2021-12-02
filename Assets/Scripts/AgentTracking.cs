@@ -10,6 +10,7 @@ public class AgentTracking : MonoBehaviour
     public GameObject target;
     // Start is called before the first frame update
     public float wanderRange;
+    public double thread = 3.0;
     private NavMeshAgent navMeshAgent;
     private NavMeshHit navMeshHit;
     void Start()
@@ -22,7 +23,6 @@ public class AgentTracking : MonoBehaviour
 
     private void Update()
     {
-        double thread = 1.0;
         agent = transform.GetComponent<NavMeshAgent>();
         var endPoint = new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z);
         var currentPoint = new Vector3(agent.transform.position.x, transform.position.y, agent.transform.position.z);
