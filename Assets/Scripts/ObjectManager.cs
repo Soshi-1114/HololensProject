@@ -27,6 +27,10 @@ public class ObjectManager : MonoBehaviour
     {
         flor.SetActive(true);
     }
+    public void hideFlor()
+    {
+        flor.SetActive(false);
+    }
 
     public void setPositionUp()
     {
