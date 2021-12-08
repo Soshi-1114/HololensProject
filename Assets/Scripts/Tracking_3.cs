@@ -5,7 +5,7 @@ using UnityEngine.AI;
 // using TMPro;
 
 
-public class TargetTracking : MonoBehaviour
+public class Tracking_3 : MonoBehaviour
 {
     public NavMeshAgent agent;
     public GameObject target_1;

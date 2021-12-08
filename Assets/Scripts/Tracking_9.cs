@@ -5,7 +5,7 @@ using UnityEngine.AI;
 // using TMPro;
 
 
-public class TargetTracking : MonoBehaviour
+public class Tracking_9 : MonoBehaviour
 {
     public NavMeshAgent agent;
     public GameObject target_1;
@@ -24,7 +24,7 @@ public class TargetTracking : MonoBehaviour
         agent = transform.GetComponent<NavMeshAgent>();
         var agentPoint = new Vector3(agent.transform.position.x, transform.position.y, agent.transform.position.z);
         var targetPoint_1 = new Vector3(target_1.transform.position.x, transform.position.y, target_1.transform.position.z);
-        if (Vector3.Distance(agentPoint, targetPoint_1) < 0.5){
+        if (Vector3.Distance(agentPoint, targetPoint_1) < 0.9){
                 agent.isStopped = true;
                 pathStatus = agent.isStopped;
                 // pathStatus = agent.pathStatus;
