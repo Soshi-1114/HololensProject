@@ -10,7 +10,8 @@ public class ObjectManager : MonoBehaviour
     public GameObject fifteen_agents;
     public GameObject twenty_agents;
 
-    public GameObject flor;
+    public GameObject wayPoint;
+    public GameObject mainTarget;
 
     // Start is called before the first frame update
     void Start()
@@ -25,25 +26,34 @@ public class ObjectManager : MonoBehaviour
 
     public void showFlor()
     {
-        flor.SetActive(true);
+        wayPoint.SetActive(true);
     }
     public void hideFlor()
     {
-        flor.SetActive(false);
+        wayPoint.SetActive(false);
     }
 
+    public void ResetPosition()
+    {
+        Vector3 waypos = wayPoint.transform.position;
+        Vector3 mainpos = mainTarget.transform.position;
+        waypos.y = -0.5f;
+        mainpos.y = -0.5f;
+        wayPoint.transform.position = waypos;
+        mainTarget.transform.position = mainpos;
+    }
     public void setPositionUp()
     {
-        Vector3 pos = flor.transform.position;
+        Vector3 pos = wayPoint.transform.position;
         pos.y += 0.1f;
-        flor.transform.position = pos;
+        wayPoint.transform.position = pos;
     }
 
     public void setPositionDown() 
     {
-        Vector3 pos = flor.transform.position;
+        Vector3 pos = wayPoint.transform.position;
         pos.y -= 0.1f;
-        flor.transform.position = pos;
+        wayPoint.transform.position = pos;
     }
     public void showAgent()
     {
