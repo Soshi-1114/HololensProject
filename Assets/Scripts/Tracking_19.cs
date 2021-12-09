@@ -18,35 +18,22 @@ public class Tracking_19 : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        // UnitychanCotroller = GetComponent<Animator>();
         agent.SetDestination(wayPoint.position);
         agent.stoppingDistance = 0.5f;
+        pathStatus=false;
     }
 
     private void Update()
     {
-        // agent = transform.GetComponent<NavMeshAgent>();
-        // var agentPoint = new Vector3(agent.transform.position.x, transform.position.y, agent.transform.position.z);
-        // var mainPoint = new Vector3(mainTarget.transform.position.x, transform.position.y, mainTarget.transform.position.z);
-        // if (Vector3.Distance(agentPoint, mainPoint) < 0.5){
-        //         agent.isStopped = true;
-        //         pathStatus = agent.isStopped;
-        //         // pathStatus = agent.pathStatus;
-        //         // _debug.text = "StopsStatusT:"+agent.pathStatus+"\n";
-        //     } else {
-        //         agent.isStopped = false;
-        //         agent.destination = mainPoint;
-        //         pathStatus = agent.isStopped;
-        //         // pathStatus = agent.pathStatus;
-        //         // _debug.text = "StopsStatusF:"+agent.pathStatus+"\n";
-        // }
-        if (agent.remainingDistance <= agent.stoppingDistance)
+        if (pathStatus)
+        {
+            agent.SetDestination(mainTarget.position);
+            // Debug.Log("main");
+        }
+        if (Vector3.Distance(wayPoint.position,agent.transform.position) <= agent.stoppingDistance)
         {
             pathStatus = true;
-            // 目的地を次の場所に設定
-            agent.SetDestination(mainTarget.position);
-        }
-        
+        } 
     }
     public bool PathStatus{
         get {return pathStatus;}

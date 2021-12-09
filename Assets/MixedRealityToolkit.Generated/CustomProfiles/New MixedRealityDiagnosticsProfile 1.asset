@@ -18,7 +18,7 @@ MonoBehaviour:
   showFrameInfo: 1
   showMemoryStats: 1
   frameSampleRate: 0.1
-  windowAnchor: 1
+  windowAnchor: 8
   windowOffset: {x: 0.1, y: 0.1}
   windowScale: 1.5
   windowFollowSpeed: 5
