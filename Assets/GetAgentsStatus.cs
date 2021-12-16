@@ -12,6 +12,7 @@ public class GetAgentsStatus : MonoBehaviour
     [SerializeField] private Tracking_2 Tracking_2;
     [SerializeField] private Tracking_3 Tracking_3;
     [SerializeField] private Tracking_4 Tracking_4;
+    private bool resetStatus = false;
     // public GameObject Child;
     // public Transform meeple;
     // Start is called before the first frame update
@@ -33,5 +34,18 @@ public class GetAgentsStatus : MonoBehaviour
             _debug.text = "Start\n";
         }
         // _debug.text = TrackingScript.PathStatus+"\n";
+    }
+    public void OnClickReset()
+    {
+        TrackingScript.Agent.transform.position = TrackingScript.ResetPosition;
+        Tracking_1.Agent.transform.position = Tracking_1.ResetPosition;
+        Tracking_2.Agent.transform.position = Tracking_2.ResetPosition;
+        Tracking_3.Agent.transform.position = Tracking_3.ResetPosition;
+        Tracking_4.Agent.transform.position = Tracking_4.ResetPosition;
+        TrackingScript.PathStatus = resetStatus;
+        Tracking_1.PathStatus = resetStatus;
+        Tracking_2.PathStatus = resetStatus;
+        Tracking_3.PathStatus = resetStatus;
+        Tracking_4.PathStatus = resetStatus;
     }
 }

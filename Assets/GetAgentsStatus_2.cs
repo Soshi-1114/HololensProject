@@ -22,6 +22,7 @@ public class GetAgentsStatus_2 : MonoBehaviour
     [SerializeField] private Tracking_12 Tracking_12;
     [SerializeField] private Tracking_13 Tracking_13;
     [SerializeField] private Tracking_14 Tracking_14;
+    private bool resetStatus = false;
     // public GameObject Child;
     // public Transform meeple;
     // Start is called before the first frame update
@@ -59,4 +60,39 @@ public class GetAgentsStatus_2 : MonoBehaviour
             _debug.text = "Start\n";
         }
     }
+    public void OnClickReset()
+    {
+        TrackingScript.Agent.transform.position = TrackingScript.ResetPosition;
+        Tracking_1.Agent.transform.position = Tracking_1.ResetPosition;
+        Tracking_2.Agent.transform.position = Tracking_2.ResetPosition;
+        Tracking_3.Agent.transform.position = Tracking_3.ResetPosition;
+        Tracking_4.Agent.transform.position = Tracking_4.ResetPosition;
+        Tracking_5.Agent.transform.position = Tracking_5.ResetPosition;
+        Tracking_6.Agent.transform.position = Tracking_6.ResetPosition;
+        Tracking_7.Agent.transform.position = Tracking_7.ResetPosition;
+        Tracking_8.Agent.transform.position = Tracking_8.ResetPosition;
+        Tracking_9.Agent.transform.position = Tracking_9.ResetPosition;
+        Tracking_10.Agent.transform.position = Tracking_10.ResetPosition;
+        Tracking_11.Agent.transform.position =Tracking_11.ResetPosition;
+        Tracking_12.Agent.transform.position =Tracking_12.ResetPosition;
+        Tracking_13.Agent.transform.position =Tracking_13.ResetPosition;
+        Tracking_14.Agent.transform.position =Tracking_14.ResetPosition;
+
+        TrackingScript.PathStatus = resetStatus;
+        Tracking_1.PathStatus = resetStatus;
+        Tracking_2.PathStatus = resetStatus;
+        Tracking_3.PathStatus = resetStatus;
+        Tracking_4.PathStatus = resetStatus;
+        Tracking_5.PathStatus = resetStatus;
+        Tracking_6.PathStatus = resetStatus;
+        Tracking_7.PathStatus = resetStatus;
+        Tracking_8.PathStatus = resetStatus;
+        Tracking_9.PathStatus = resetStatus;
+        Tracking_10.PathStatus = resetStatus;
+        Tracking_11.PathStatus = resetStatus;
+        Tracking_12.PathStatus = resetStatus;
+        Tracking_13.PathStatus = resetStatus;
+        Tracking_14.PathStatus = resetStatus;
+    }
+
 }

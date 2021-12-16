@@ -46,8 +46,8 @@ public class ObjectManager : MonoBehaviour
     {
         Vector3 waypos = wayPoint.transform.position;
         Vector3 mainpos = mainTarget.transform.position;
-        waypos.y = -0.5f;
-        mainpos.y = -0.5f;
+        waypos.y = 0.0f;
+        mainpos.y = 0.0f;
         wayPoint.transform.position = waypos;
         mainTarget.transform.position = mainpos;
     }

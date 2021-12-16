@@ -11,14 +11,16 @@ public class Tracking_3 : MonoBehaviour
     public Transform mainTarget;
     public Transform wayPoint;
     // public TextMeshProUGUI _debug;
-    private bool pathStatus;
+    public bool pathStatus;
+    public Vector3 firstPosition;
 
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        firstPosition = agent.transform.position;
         agent.SetDestination(wayPoint.position);
-        agent.stoppingDistance = 0.5f;
+        agent.stoppingDistance = 0.8f;
         pathStatus=false;
     }
 
@@ -32,9 +34,24 @@ public class Tracking_3 : MonoBehaviour
         if (Vector3.Distance(wayPoint.position,agent.transform.position) <= agent.stoppingDistance)
         {
             pathStatus = true;
-        } 
+        } else {
+            if(!pathStatus){
+                agent.SetDestination(wayPoint.position);
+            }
+        }
     }
     public bool PathStatus{
         get {return pathStatus;}
+        set {pathStatus = value;}
     }
-}
+    public Vector3 ResetPosition
+    {
+        // agent.transform.position = firstPosition;
+        get {return firstPosition;}
+        set {firstPosition = value;}
+    }
+    public NavMeshAgent Agent
+    {
+        // agent.transform.position = firstPosition;
+        get {return agent;}
+    }}
