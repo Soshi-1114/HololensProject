@@ -24,6 +24,15 @@ public class ObjectManager : MonoBehaviour
 
     }
 
+    public void hideAllAgents()
+    {
+        five_agents.SetActive(false);
+        ten_agents.SetActive(false);
+        fifteen_agents.SetActive(false);
+        twenty_agents.SetActive(false);
+
+    }
+
     public void showFlor()
     {
         wayPoint.SetActive(true);
