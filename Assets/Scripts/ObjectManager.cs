@@ -9,6 +9,8 @@ public class ObjectManager : MonoBehaviour
     public GameObject ten_agents;
     public GameObject fifteen_agents;
     public GameObject twenty_agents;
+    public GameObject thirty_agents;
+    public GameObject fourty_agents;
 
     public GameObject wayPoint;
     public GameObject mainTarget;
@@ -21,6 +23,8 @@ public class ObjectManager : MonoBehaviour
         ten_agents.SetActive(false);
         fifteen_agents.SetActive(false);
         twenty_agents.SetActive(false);
+        thirty_agents.SetActive(false);
+        fourty_agents.SetActive(false);
 
     }
 
@@ -30,7 +34,8 @@ public class ObjectManager : MonoBehaviour
         ten_agents.SetActive(false);
         fifteen_agents.SetActive(false);
         twenty_agents.SetActive(false);
-
+        thirty_agents.SetActive(false);
+        fourty_agents.SetActive(false);
     }
 
     public void showFlor()
@@ -69,36 +74,54 @@ public class ObjectManager : MonoBehaviour
         five_agents.SetActive(true);
     }
 
-    public void hideAgent()
-    {
-        five_agents.SetActive(false);
-    }
+    // public void hideAgent()
+    // {
+    //     five_agents.SetActive(false);
+    // }
     public void showTenAgent()
     {
         ten_agents.SetActive(true);
     }
 
-    public void hideTenAgent()
-    {
-        ten_agents.SetActive(false);
-    }
+    // public void hideTenAgent()
+    // {
+    //     ten_agents.SetActive(false);
+    // }
     public void showFifteenAgent()
     {
         fifteen_agents.SetActive(true);
     }
 
-    public void hideFifteenAgent()
-    {
-        fifteen_agents.SetActive(false);
-    }
+    // public void hideFifteenAgent()
+    // {
+    //     fifteen_agents.SetActive(false);
+    // }
     public void showTwentyAgent()
     {
         twenty_agents.SetActive(true);
     }
 
-    public void hideTwentyAgent()
+    // public void hideTwentyAgent()
+    // {
+    //     twenty_agents.SetActive(false);
+    // }
+    public void showThirtyAgent()
     {
-        twenty_agents.SetActive(false);
+        thirty_agents.SetActive(true);
     }
+
+    // public void hideThirtyAgent()
+    // {
+    //     thirty_agents.SetActive(false);
+    // }
+    public void showFourtyAgent()
+    {
+        fourty_agents.SetActive(true);
+    }
+
+    // public void hideFourtyAgent()
+    // {
+    //     fourty_agents.SetActive(false);
+    // }
 }
 
